@@ -41,6 +41,9 @@ The architecture follows a standard 4-layer IoT reference model:
 The project utilizes the following simulated hardware components:
 
 ### Node 1: Production Line
+
+![Node 1 - Production Line](images/Node1.png)
+
 | Component | Pin | Function |
 | :--- | :--- | :--- |
 | **DHT22** | `D2` | Air temperature and humidity monitoring |
@@ -51,6 +54,9 @@ The project utilizes the following simulated hardware components:
 | **LEDs** | `D5, D6, D7`| Status indicators (Green=OK, Yellow=Warning, Red=Critical) |
 
 ### Node 2: Warehouse
+
+![Node 2 - Warehouse](images/Node2.png)
+
 | Component | Pin | Function |
 | :--- | :--- | :--- |
 | **DHT22** | `D2` | Ambient warehouse climate monitoring |
@@ -79,6 +85,13 @@ The embedded C++ code is highly modularized for maintainability and scalability:
 - **Remote Equipment Shutdown:** Managers can use the Dashboard RPC switches to instantly de-energize production relays in emergencies.
 - **Security Monitoring:** Combines PIR motion logic (with a 10-second hold latch) and door reed switches to monitor after-hours access.
 - **Fault Tolerance:** If a DHT22 sensor fails, the system detects the read error, caches the last valid values to prevent false alarms, and blinks a warning LED.
+
+### 📊 Dashboard Screenshots
+
+| | |
+|:---:|:---:|
+| ![Dashboard 1](images/Dashboard1.png) | ![Dashboard 2](images/Dashbaord2.png) |
+| ![Dashboard 3](images/Dashbaord3.png) | ![Dashboard 4](images/Dashboard4.png) |
 
 ---
 
