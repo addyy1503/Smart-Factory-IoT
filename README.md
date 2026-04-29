@@ -23,6 +23,8 @@ The system operates across two distinct simulated nodes:
 
 ## 🏗 System Architecture
 
+![System Architecture](images/system_architecture.png)
+
 The architecture follows a standard 4-layer IoT reference model:
 
 1. **Perception (Edge):** Arduino Uno gathering analog and digital signals.
@@ -30,7 +32,7 @@ The architecture follows a standard 4-layer IoT reference model:
 3. **Processing (Platform):** ThingsBoard CE handling data storage, Rule Engine, and Alarm Management.
 4. **Application (UI):** Live interactive web dashboard with RPC (Remote Procedure Call) support.
 
-*(Architecture flow: Sensors → Arduino Uno → MQTT Broker → ThingsBoard → Dashboard)*
+> **Data Flow:** Sensors → Arduino Uno → MQTT Broker → ThingsBoard → Dashboard | Bidirectional control via RPC
 
 ---
 
